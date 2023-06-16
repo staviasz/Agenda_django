@@ -295,12 +295,19 @@ svg {
 .btn {
   background-color: var(--link-dark-color);
   color: var(--clr-white);
+  
   font-weight: bold;
+  font-size: 16px;
   border: none;
   padding: 1rem 2rem;
   border-radius: var(--default-border-radius);
   cursor: pointer;
   transition: filter var(--transition-fast) ease-in-out;
+  
+}
+
+.contact-links {
+  display: flex;
 }
 
 .btn:hover {
@@ -311,4 +318,16 @@ svg {
 .btn:active {
   filter: brightness(80%);
   box-shadow: 0 0 5px var(--link-dark-color);
+}
+
+.btn-link {
+  text-decoration: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 10px 20px 0 0;
+}
+
+.btn-delete {
+  background-color: tomato;
 }
