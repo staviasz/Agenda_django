@@ -5,7 +5,7 @@
     <h2>Contact</h2>
 
     <form 
-      action="/contact/create/"
+      action="{{ form_action }}"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -20,7 +20,7 @@
           </div>
         </div>
       {% endfor %}
-      
+
       <div class="form-content">
         <div class="form-group">
           <button class="btn" type="submit">Send</button>

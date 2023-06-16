@@ -6,6 +6,8 @@ from contact.models import Contact
 
 
 class ContactForm(forms.ModelForm):
+  def __ini__(self, *args, **kwargs):
+    super().__init__(*args, **kwargs)
   class Meta:
     model = Contact
     fields = (
@@ -30,4 +32,4 @@ class ContactForm(forms.ModelForm):
       )
     return first_name
 
-  
+
