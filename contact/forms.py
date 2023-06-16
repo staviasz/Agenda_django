@@ -10,6 +10,7 @@ from contact.models import Contact
 
 class ContactForm(forms.ModelForm):
   picture = forms.ImageField(
+    required=False,
     widget = forms.FileInput()
   )
   class Meta:
@@ -43,7 +44,6 @@ class UserForm(UserCreationForm):
     min_length=3
   )
 
-  email = forms.EmailField()
 
   class Meta:
     model = User

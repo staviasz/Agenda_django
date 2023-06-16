@@ -10,20 +10,22 @@ def create(request):
   if request.method == 'GET':
     context = {
       'form': ContactForm(),
-      'form_action': form_action
+      'form_action': form_action,
+      'title_form': 'Create Contact'
     }
   else:
     form = ContactForm(request.POST, request.FILES)
     context = {
       'form': form,
-      'form_action': form_action
+      'form_action': form_action,
+      'title_form': 'Create Contact'
     }
 
     if form.is_valid():
       contact = form.save()
       return redirect('contact:update', contact_id=contact.pk)
 
-  return render(request, 'contact/create.html', context)
+  return render(request, 'contact/form_index.html', context)
 
 def update(request, contact_id):
   contact = get_object_or_404(
@@ -36,20 +38,22 @@ def update(request, contact_id):
   if request.method == 'GET':
     context = {
       'form': ContactForm(instance=contact),
-      'form_action': form_action
+      'form_action': form_action,
+      'title_form': 'Update Contact'
     }
   else:
     form = ContactForm(request.POST,request.FILES , instance=contact)
     context = {
       'form': form,
-      'form_action': form_action
+      'form_action': form_action,
+      'title_form': 'Update Contact'
     }
 
     if form.is_valid():
       contact = form.save()
       return redirect('contact:update', contact_id=contact.pk)
 
-  return render(request, 'contact/create.html', context)
+  return render(request, 'contact/form_index.html', context)
 
 def delete(request, contact_id):
   contact = get_object_or_404(
