@@ -6,8 +6,9 @@ from contact.models import Contact
 
 
 class ContactForm(forms.ModelForm):
-  def __ini__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)
+  picture = forms.ImageField(
+    widget = forms.FileInput()
+  )
   class Meta:
     model = Contact
     fields = (
@@ -17,6 +18,7 @@ class ContactForm(forms.ModelForm):
       'email',
       'description',
       'category',
+      'picture',
     )
 
   def clean_first_name(self):

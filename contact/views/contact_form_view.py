@@ -13,7 +13,7 @@ def create(request):
       'form_action': form_action
     }
   else:
-    form = ContactForm(request.POST)
+    form = ContactForm(request.POST, request.FILES)
     context = {
       'form': form,
       'form_action': form_action
@@ -24,7 +24,6 @@ def create(request):
       return redirect('contact:update', contact_id=contact.pk)
 
   return render(request, 'contact/create.html', context)
-
 
 def update(request, contact_id):
   contact = get_object_or_404(
@@ -40,7 +39,7 @@ def update(request, contact_id):
       'form_action': form_action
     }
   else:
-    form = ContactForm(request.POST, instance=contact)
+    form = ContactForm(request.POST,request.FILES , instance=contact)
     context = {
       'form': form,
       'form_action': form_action
