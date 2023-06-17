@@ -1,6 +1,6 @@
 <header class="header">
   <h1 class="header-heading">
-    <a href="{% url 'contact:index' %}" class="header-link">Agenda</a>
+    <a href="{% url 'contact:index' %}" class="header-link">Schedule</a>
   </h1>
 
   <nav class="menu">
@@ -9,9 +9,9 @@
         <a href="{% url 'contact:create' %}" class="menu-link">Create contact</a>
       </li>
       {% if user.is_authenticated %}
-        <li class="menu-item">
-          <a href="{% url 'contact:logout' %}" class="menu-link">Logout</a>
-        </li>
+      <li class="menu-item">
+        <a href="{% url 'contact:logout' %}" class="menu-link">Logout</a>
+      </li>
       {% endif %}
     </ul>
   </nav>
