@@ -331,3 +331,33 @@ svg {
 .btn-delete {
   background-color: tomato;
 }
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.home-icon {
+  font-size: 180px;
+  color: var(--clr-black);
+}
+
+.home-link {
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--clr-black);
+}
+
+.home-icon:active,
+.home-link:active {
+  color: rgb(0, 0, 70);;
+}

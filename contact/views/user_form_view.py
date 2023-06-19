@@ -24,6 +24,7 @@ def register(request):
     {
       'form': form,
       'title_form': 'Register',
+      'access_without_login': True
     }
   )
 
@@ -72,7 +73,8 @@ def login(request, request_login: Union[QueryDict, None] = None):
     'contact/form_index.html',
     {
       'form': form,
-      'title_form': 'Login'
+      'title_form': 'Login',
+      'access_without_login': True
     }
   )
 
