@@ -1,6 +1,6 @@
 asgiref==3.7.2
 beautifulsoup4==4.12.2
-Django==4.2.2
+Django==4.2.4
 django-fontawesome==1.0
 django-icons==23.3
 django-material-icons==0.1.2
