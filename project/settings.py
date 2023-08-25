@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-j+*qu!p0tb%1ltr$1fr#8kn-1)*3+3sl=w$pr!k))#*5hoek*g')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+DEBUG = False
 
 # ALLOWED_HOSTS = ['agenda-fbzo.onrender.com']
 ALLOWED_HOSTS = ['*']
