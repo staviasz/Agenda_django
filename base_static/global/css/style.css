@@ -346,7 +346,7 @@ svg {
 }
 
 .home-icon {
-  font-size: 180px;
+  font-size: 100px;
   color: var(--clr-black);
 }
 
@@ -360,4 +360,8 @@ svg {
 .home-icon:active,
 .home-link:active {
   color: rgb(0, 0, 70);;
+}
+
+.img-contact {
+  max-width: 50%;
 }
